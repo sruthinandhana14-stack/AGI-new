@@ -2,8 +2,6 @@ import os, re, urllib.parse, urllib.request
 from flask import Flask, abort, jsonify, render_template, request
 
 app = Flask(__name__)
-
-
 def get_vid(q):  
     try:
         req = urllib.request.Request(f"https://www.youtube.com/results?search_query={urllib.parse.quote(q)}", headers={"User-Agent": "Mozilla/5.0"})
